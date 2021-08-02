@@ -13,6 +13,8 @@
 
 #pragma once
 
+#include <memory>
+
 /* Calypsonet Terminal Reader */
 #include "CardReaderEvent.h"
 
@@ -35,7 +37,7 @@ public:
      * @param readerEvent The not null {@link CardReaderEvent} containing the event data.
      * @since 1.0
      */
-    virtual void onReaderEvent(const CardReaderEvent readerEvent) = 0;
+    virtual void onReaderEvent(const std::shared_ptr<CardReaderEvent> readerEvent) = 0;
 };
 
 }

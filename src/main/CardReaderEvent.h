@@ -14,6 +14,7 @@
 #pragma once
 
 #include <memory>
+#include <typeinfo>
 
 /* Calypsonet Terminal Reader */
 #include "ScheduledCardSelectionsResponse.h"
@@ -21,6 +22,8 @@
 namespace calypsonet {
 namespace terminal {
 namespace reader {
+
+using namespace calypsonet::terminal::reader::selection;
 
 /**
  * Card event data container indicating a change of state.

@@ -17,18 +17,21 @@
 
 /* Calypsonet Terminal Reader */
 #include "CardReader.h"
+#include "CardReaderObserverSpi.h"
 #include "CardReaderObservationExceptionHandlerSpi.h"
 
 namespace calypsonet {
 namespace terminal {
 namespace reader {
 
+using namespace calypsonet::terminal::reader::spi;
+
 /**
  * Card reader able to observe the insertion/removal of cards.
  *
  * @since 1.0
  */
-class ObservableCardReader : public CardReader {
+class ObservableCardReader : virtual public CardReader {
 public:
     /**
      * Card detection management options to be applied after processing a card.
@@ -89,7 +92,8 @@ public:
      * @throw IllegalArgumentException If the provided executor service is null.
      * @since 1.0
      */
-    //void setEventNotificationExecutorService(ExecutorService eventNotificationExecutorService);
+    //virtual void setEventNotificationExecutorService(
+    //    std::shared_ptr<ExecutorService> eventNotificationExecutorService) = 0;
 
     /**
      * Sets the exception handler.
@@ -141,7 +145,7 @@ public:
      * @return An int.
      * @since 1.0
      */
-    virtual int countObservers() = 0;
+    virtual int countObservers() const = 0;
 
     /**
      * Starts the card detection. Once activated, the application can be notified of the arrival of

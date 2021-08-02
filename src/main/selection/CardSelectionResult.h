@@ -48,7 +48,7 @@ public:
      * @return A not null but possibly empty map.
      * @since 1.0
      */
-    virtual std::map<int, std::shared_ptr<SmcartCard>> getSmartCards() const = 0;
+    virtual const std::map<int, std::shared_ptr<SmartCard>>& getSmartCards() const = 0;
 
     /**
      * Gets the active matching card. I.e. the card that has been selected.
