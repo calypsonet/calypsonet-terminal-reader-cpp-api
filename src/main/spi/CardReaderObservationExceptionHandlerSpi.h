@@ -13,13 +13,17 @@
 
 #pragma once
 
-#include <exception>
 #include <string>
+
+/* Keyple Core Util */
+#include <Exception.h>
 
 namespace calypsonet {
 namespace terminal {
 namespace reader {
 namespace spi {
+
+using namespace keyple::core::util::cpp::exception;
 
 /**
  * Reader observation error handler to implement in order to be notified of errors that may occur
@@ -41,7 +45,7 @@ public:
      */
     virtual void onReaderObservationError(const std::string& contextInfo,
                                           const std::string& readerName,
-                                          const std::exception& e) = 0;
+                                          const std::shared_ptr<Exception> e) = 0;
 };
 
 }

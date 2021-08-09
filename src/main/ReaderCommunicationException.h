@@ -1,6 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2021 Calypso Networks Association                                                *
- * https://www.calypsonet-asso.org/                                                               *
+ * Copyright (c) 2021 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * See the NOTICE file(s) distributed with this work for additional information regarding         *
  * copyright ownership.                                                                           *
@@ -43,7 +42,7 @@ public:
      * @param cause The cause.
      * @since 1.0
      */
-    ReaderCommunicationException(const std::string& message, const std::exception& cause)
+    ReaderCommunicationException(const std::string& message, const std::shared_ptr<Exception> cause)
     : RuntimeException(message, cause) {}
 };
 
