@@ -37,10 +37,13 @@ public:
     /**
      * Tells if the card communication mode is contactless.
      *
+     * C++ note: this function cannot be set 'const' as some derived classes will set internal
+     *           flags accordingly.
+     *
      * @return True if the communication is contactless.
      * @since 1.0
      */
-    virtual bool isContactless() const = 0;
+    virtual bool isContactless() = 0;
 
     /**
      * Checks if is the card present.

@@ -1,6 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2021 Calypso Networks Association                                                *
- * https://www.calypsonet-asso.org/                                                               *
+ * Copyright (c) 2021 Calypso Networks Association https://calypsonet.org/                        *                                                               *
  *                                                                                                *
  * See the NOTICE file(s) distributed with this work for additional information regarding         *
  * copyright ownership.                                                                           *
@@ -17,6 +16,7 @@
 #include <memory>
 
 /* Keyple Core Util */
+#include "Exception.h"
 #include "RuntimeException.h"
 
 namespace calypsonet {
@@ -44,7 +44,7 @@ public:
      * @param cause The cause.
      * @since 1.0
      */
-    InvalidCardResponseException(const std::string& message, const std::exception& cause)
+    InvalidCardResponseException(const std::string& message, const std::shared_ptr<Exception> cause)
     : RuntimeException(message, cause) {}
 };
 

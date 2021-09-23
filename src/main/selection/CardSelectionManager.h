@@ -1,6 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2021 Calypso Networks Association                                                *
- * https://www.calypsonet-asso.org/                                                               *
+ * Copyright (c) 2021 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * See the NOTICE file(s) distributed with this work for additional information regarding         *
  * copyright ownership.                                                                           *
@@ -18,8 +17,8 @@
 /* Calypsonet Terminal Reader */
 #include "CardReader.h"
 #include "CardSelection.h"
-#include "CardSelectionRequest.h"
 #include "CardSelectionResult.h"
+#include "ObservableCardReader.h"
 
 namespace calypsonet {
 namespace terminal {
