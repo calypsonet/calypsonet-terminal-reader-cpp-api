@@ -27,6 +27,11 @@ namespace reader {
 class CardReader {
 public:
     /**
+     * 
+     */
+    virtual ~CardReader() = default;
+
+    /**
      * Gets the name of the reader.
      *
      * @return A not empty string.

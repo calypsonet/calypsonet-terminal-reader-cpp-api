@@ -63,6 +63,11 @@ using NotificationMode = ObservableCardReader::NotificationMode;
 class CardSelectionManager {
 public:
     /**
+     * 
+     */
+    virtual ~CardSelectionManager() = default;
+    
+    /**
      * Sets the multiple selection mode to process all selection cases even in case of successful
      * selection.
      *
