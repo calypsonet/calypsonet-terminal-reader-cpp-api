@@ -22,14 +22,6 @@ http://www.eclipse.org/legal/epl-2.0.
 
 SPDX-License-Identifier: EPL-2.0
 
-## Contributors
-
-* Pierre Terrée - API specification
-* Alexandre Munsch - Keyple Core, Keyple Calypso, PCSC plugin and Stub plugin
-* Jean-Pierre Fortune - Keyple Core, Keyple Calypso, PCSC plugin and Stub plugin
-* Andrei Cristea - Keyple Core, Keyple Distributed and Keyple Calypso
-* Brice Ruppen - DevOps
-
 ## Third-party Content
 
 No third-party content.

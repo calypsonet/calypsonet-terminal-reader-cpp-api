@@ -25,9 +25,6 @@ using namespace keyple::core::util::cpp::exception;
 /**
  * Indicates that the communication with the card failed.
  *
- * <p>The most likely reason is that the card was removed from the reader during the exchange, but
- * other technical problems may also be the origin of the failure.
- *
  * @since 1.0.0
  */
 class CardCommunicationException final : public RuntimeException {
