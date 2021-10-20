@@ -21,7 +21,7 @@ namespace reader {
 /**
  * Card reader driving the underlying hardware to manage the card detection.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class CardReader {
 public:
@@ -34,7 +34,7 @@ public:
      * Gets the name of the reader.
      *
      * @return A not empty string.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::string& getName() const = 0;
 
@@ -45,7 +45,7 @@ public:
      *           flags accordingly.
      *
      * @return True if the communication is contactless.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual bool isContactless() = 0;
 
@@ -54,7 +54,7 @@ public:
      *
      * @return True if a card is inserted in the reader.
      * @throws ReaderCommunicationException If the communication with the reader has failed.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual bool isCardPresent() = 0;
 };

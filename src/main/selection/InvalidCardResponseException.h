@@ -29,20 +29,20 @@ using namespace keyple::core::util::cpp::exception;
 /**
  * Indicates that a response received from the card during the selection process was invalid.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class InvalidCardResponseException final : public RuntimeException {
 public:
     /**
      * @param message The message to identify the exception context.
-     * @since 1.0
+     * @since 1.0.0
      */
     InvalidCardResponseException(const std::string& message) : RuntimeException(message) {}
 
     /**
      * @param message The message to identify the exception context.
      * @param cause The cause.
-     * @since 1.0
+     * @since 1.0.0
      */
     InvalidCardResponseException(const std::string& message, const std::shared_ptr<Exception> cause)
     : RuntimeException(message, cause) {}

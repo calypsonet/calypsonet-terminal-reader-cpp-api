@@ -36,7 +36,7 @@ using namespace calypsonet::terminal::reader::selection::spi;
  * allow to make use of these results according to the configurations and the needs of the
  * application.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class CardSelectionResult {
 public:
@@ -46,7 +46,7 @@ public:
      * CardSelectionManager#prepareSelection(CardSelection) method.
      *
      * @return A not null but possibly empty map.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::map<int, std::shared_ptr<SmartCard>>& getSmartCards() const = 0;
 
@@ -54,7 +54,7 @@ public:
      * Gets the active matching card. I.e. the card that has been selected.
      *
      * @return Null if there is no active card.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::shared_ptr<SmartCard> getActiveSmartCard() const = 0;
 
@@ -62,7 +62,7 @@ public:
      * Gets the index of the active selection if any.
      *
      * @return A positive value if there is an active selection, -1 if there is no active selection.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual int getActiveSelectionIndex() const = 0;
 };

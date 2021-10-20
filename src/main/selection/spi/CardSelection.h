@@ -23,7 +23,7 @@ namespace spi {
  *
  * <p>Performed by the CardSelectionManager, one or more selections could be made.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class CardSelection {};
 

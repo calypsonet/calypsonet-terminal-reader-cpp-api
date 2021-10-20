@@ -1,6 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2021 Calypso Networks Association                                                *
- * https://www.calypsonet-asso.org/                                                               *
+ * Copyright (c) 2021 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * See the NOTICE file(s) distributed with this work for additional information regarding         *
  * copyright ownership.                                                                           *
@@ -29,7 +28,7 @@ using namespace keyple::core::util::cpp::exception;
  * Reader observation error handler to implement in order to be notified of errors that may occur
  * during operations carried out by the card monitoring process.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class CardReaderObservationExceptionHandlerSpi {
 public:
@@ -41,7 +40,7 @@ public:
      * @param contextInfo The context information.
      * @param readerName The reader name.
      * @param e The original exception.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual void onReaderObservationError(const std::string& contextInfo,
                                           const std::string& readerName,

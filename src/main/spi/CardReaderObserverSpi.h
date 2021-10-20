@@ -27,7 +27,7 @@ namespace spi {
  * Reader observer to implement in order to receive {@link CardReaderEvent} from a
  * calypsonet::terminal::reader::ObservableCardReader.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class CardReaderObserverSpi {
 public:
@@ -38,7 +38,7 @@ public:
      * depend on the implementation used.
      *
      * @param readerEvent The not null {@link CardReaderEvent} containing the event data.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual void onReaderEvent(const std::shared_ptr<CardReaderEvent> readerEvent) = 0;
 };

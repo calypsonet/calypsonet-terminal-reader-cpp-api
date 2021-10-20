@@ -37,7 +37,7 @@ using namespace keyple::core::util::cpp::exception;
  * CardSelectionManager#parseScheduledCardSelectionsResponse(ScheduledCardSelectionsResponse) to
  * analyze the result.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class ScheduledCardSelectionsResponse {};
 

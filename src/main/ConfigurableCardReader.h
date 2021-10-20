@@ -23,7 +23,7 @@ namespace reader {
 /**
  * Configurable Card reader driving the underlying hardware to manage the card detection.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class ConfigurableCardReader : public CardReader {
 public:
@@ -51,7 +51,7 @@ public:
      * @param cardProtocol The name of the protocol as known by the application.
      * @throw IllegalArgumentException If one of the provided protocol is null or empty.
      * @throw ReaderProtocolNotSupportedException If the protocol is not supported.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual void activateProtocol(const std::string& readerProtocol,
                                   const std::string& cardProtocol) = 0;
@@ -68,7 +68,7 @@ public:
      * @param readerProtocol The name of the protocol as known by the reader.
      * @throw IllegalArgumentException If the provided protocol is null or empty.
      * @throw ReaderProtocolNotSupportedException If the protocol is not supported.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual void deactivateProtocol(const std::string& readerProtocol) = 0;
 };

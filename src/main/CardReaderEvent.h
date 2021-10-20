@@ -31,42 +31,42 @@ using namespace calypsonet::terminal::reader::selection;
  * <p>Contains the event origin (reader name), the event type and possibly the card selection
  * response in the case of Type::CARD_INSERTED or Type::CARD_MATCHED events.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class CardReaderEvent {
 public:
     /**
      * Possible card events.
      *
-     * @since 1.0
+     * @since 1.0.0
      */
     enum Type {
 
         /**
          * A card has been inserted with or without specific selection.
          *
-         * @since 1.0
+         * @since 1.0.0
          */
         CARD_INSERTED,
 
         /**
          * A card has been inserted and matched the selection.
          *
-         * @since 1.0
+         * @since 1.0.0
          */
         CARD_MATCHED,
 
         /**
          * The card has been removed from the reader.
          *
-         * @since 1.0
+         * @since 1.0.0
          */
         CARD_REMOVED,
 
         /**
          * The reader has become unavailable.
          *
-         * @since 1.0
+         * @since 1.0.0
          */
         UNAVAILABLE
     };
@@ -75,7 +75,7 @@ public:
      * Gets the name of the reader that generated the event.
      *
      * @return A not empty string.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::string& getReaderName() const = 0;
 
@@ -83,7 +83,7 @@ public:
      * Gets the reader event type.
      *
      * @return A not null value.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual Type getType() const = 0;
 
@@ -97,7 +97,7 @@ public:
      * to analyze the result.
      *
      * @return Null if the event is not carrying a {@link ScheduledCardSelectionsResponse}.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::shared_ptr<ScheduledCardSelectionsResponse>
         getScheduledCardSelectionsResponse() const = 0;

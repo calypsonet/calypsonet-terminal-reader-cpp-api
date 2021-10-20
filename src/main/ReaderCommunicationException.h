@@ -27,20 +27,20 @@ using namespace keyple::core::util::cpp::exception;
  * <p>The most likely reason is a physical disconnection of the reader, but other technical problems
  * may also be the origin of the failure.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class ReaderCommunicationException final : public RuntimeException {
 public:
     /**
      * @param message The message to identify the exception context.
-     * @since 1.0
+     * @since 1.0.0
      */
     ReaderCommunicationException(const std::string& message) : RuntimeException(message) {}
 
     /**
      * @param message The message to identify the exception context.
      * @param cause The cause.
-     * @since 1.0
+     * @since 1.0.0
      */
     ReaderCommunicationException(const std::string& message, const std::shared_ptr<Exception> cause)
     : RuntimeException(message, cause) {}

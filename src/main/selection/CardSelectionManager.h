@@ -58,7 +58,7 @@ using NotificationMode = ObservableCardReader::NotificationMode;
  * <p>The logical channel established with the card can be left open (default) or closed after
  * selection.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class CardSelectionManager {
 public:
@@ -73,7 +73,7 @@ public:
      *
      * <p>The multiple selection mode is disabled by default.
      *
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual void setMultipleSelectionMode() = 0;
 
@@ -87,7 +87,7 @@ public:
      * @param cardSelection The card selection.
      * @return A positive int.
      * @throw IllegalArgumentException If the provided card selection is null.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual int prepareSelection(const std::shared_ptr<CardSelection> cardSelection) = 0;
 
@@ -98,7 +98,7 @@ public:
      * <p>It is thus possible to chain several selections on the same card selection scenario by
      * restarting the card connection sequence.
      *
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual void prepareReleaseChannel() = 0;
 
@@ -115,7 +115,7 @@ public:
      *        code.
      * @throw InvalidCardResponseException If the card returned invalid data during the selection
      *        process.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::shared_ptr<CardSelectionResult> processCardSelectionScenario(
         std::shared_ptr<CardReader> reader) = 0;
@@ -137,7 +137,7 @@ public:
      * @param detectionMode The card detection mode.
      * @param notificationMode The card notification mode.
      * @throw IllegalArgumentException If one of the parameters is null.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual void scheduleCardSelectionScenario(
         std::shared_ptr<ObservableCardReader> observableCardReader,
@@ -152,7 +152,7 @@ public:
      * @return A not null reference.
      * @throw IllegalArgumentException If the provided card selection response is null.
      * @throw InvalidCardResponseException If the data returned by the card could not be interpreted.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::shared_ptr<CardSelectionResult> parseScheduledCardSelectionsResponse(
         const std::shared_ptr<ScheduledCardSelectionsResponse> scheduledCardSelectionsResponse)

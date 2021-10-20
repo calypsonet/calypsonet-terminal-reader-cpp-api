@@ -25,13 +25,13 @@ using namespace keyple::core::util::cpp::exception;
 /**
  * Indicates that the current card protocol is not supported by the reader.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class ReaderProtocolNotSupportedException final : public RuntimeException {
 public:
     /**
      * @param cardProtocol The identification data used to identify the card.
-     * @since 1.0
+     * @since 1.0.0
      */
     ReaderProtocolNotSupportedException(const std::string& cardProtocol)
     : RuntimeException("The card protocol " +
