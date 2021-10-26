@@ -25,7 +25,7 @@ namespace reader {
  *
  * @since 1.0.0
  */
-class ConfigurableCardReader : public CardReader {
+class ConfigurableCardReader : virtual public CardReader {
 public:
     /**
      * 
