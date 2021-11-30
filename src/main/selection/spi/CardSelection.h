@@ -25,7 +25,13 @@ namespace spi {
  *
  * @since 1.0.0
  */
-class CardSelection {};
+class CardSelection {
+public:
+    /**
+     * 
+     */
+    virtual ~CardSelection() = default;
+};
 
 }
 }
