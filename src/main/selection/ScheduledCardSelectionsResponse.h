@@ -39,7 +39,13 @@ using namespace keyple::core::util::cpp::exception;
  *
  * @since 1.0.0
  */
-class ScheduledCardSelectionsResponse {};
+class ScheduledCardSelectionsResponse {
+public:
+    /**
+     * 
+     */
+    virtual ~ScheduledCardSelectionsResponse() = default;
+};
 
 }
 }
