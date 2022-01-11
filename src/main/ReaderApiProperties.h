@@ -23,23 +23,24 @@ namespace reader {
  *
  * @since 1.0.0
  */
-class ReaderApiProperties final {
-public:
-    /**
-     * API version: {@value}
-     *
-     * @since 1.0.0
-     */
-    static const std::string VERSION;
+// class ReaderApiProperties final {
+// public:
+//     /**
+//      * API version: {@value}
+//      *
+//      * @since 1.0.0
+//      */
+//     static const std::string VERSION;
 
-private:
-    /**
-     * Private constructor
-     */
-    ReaderApiProperties() {}
-};
+// private:
+//     /**
+//      * Private constructor
+//      */
+//     ReaderApiProperties() {}
+// };
 
-const std::string ReaderApiProperties::VERSION = "1.0";
+// const std::string ReaderApiProperties::VERSION = "1.0";
+static const std::string ReaderApiProperties_VERSION = "1.0";
 
 }
 }
