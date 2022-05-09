@@ -1,0 +1,25 @@
+name: Publish API documentation
+
+on:
+  push:
+    branches:
+      - doxygen
+
+jobs:
+  java-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code from ${{ github.repository }}/${{ github.ref }}
+        uses: actions/checkout@v2
+      - run: "mkdir out"
+      - name: Generate project documentation with Doxygen
+        uses: mattnotmitt/doxygen-action@v1.3.1
+        with:
+          doxyfile-path: .github/github_doxy #Errors on warnings
+      - run: "ls -a out"
+      - name: Deploy Doxygen documentation to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./${{ github.event.repository.name }}
+          enable_jekyll: true
