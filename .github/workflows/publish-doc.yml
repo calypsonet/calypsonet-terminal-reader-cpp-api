@@ -3,7 +3,7 @@ name: Publish API documentation
 on:
   push:
     branches:
-      - doxygen
+      - main
 
 jobs:
   java-test:
