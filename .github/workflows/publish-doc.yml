@@ -15,11 +15,11 @@ jobs:
       - name: Generate project documentation with Doxygen
         uses: mattnotmitt/doxygen-action@v1.3.1
         with:
-          doxyfile-path: .github/github_doxy #Errors on warnings
+          doxyfile-path: .github/Doxyfile #Errors on warnings
       - run: "ls -a out"
       - name: Deploy Doxygen documentation to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out/documents
+          publish_dir: ./out
           enable_jekyll: true
