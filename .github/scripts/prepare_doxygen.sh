@@ -6,20 +6,20 @@ version=$1
 
 if [ "$version" = "" ]
 then
-  version_major="$(cat CMakeLists.txt | grep -P 'CMAKE_PROJECT_VERSION_MAJOR.*\"([0-9]*)\"' -o)"
-  version_minor="$(cat CMakeLists.txt | grep -P 'CMAKE_PROJECT_VERSION_MINOR.*\"([0-9]*)\"' -o)"
-  version_patch="$(cat CMakeLists.txt | grep -P 'CMAKE_PROJECT_VERSION_PATCH.*\"([0-9]*)\"' -o)"
+  version_major="$(sed -rn 's/.*MAJOR.*\"(.*)\".*/\1/p' CMakeLists.txt)"
+  version_minor="$(sed -rn 's/.*MINOR.*\"(.*)\".*/\1/p' CMakeLists.txt)"
+  version_patch="$(sed -rn 's/.*PATCH.*\"(.*)\".*/\1/p' CMakeLists.txt)"
   version="${version_major}.${version_minor}.${version_patch}"
 fi
 
 echo "Computed current API version: $version"
 
-repository_name=`git rev-parse --show-toplevel | xargs basename`
+repository_name=$(git rev-parse --show-toplevel | xargs basename)
 
 echo "Clone $repository_name..."
-git clone https://github.com/calypsonet/$repository_name.git
+git clone https://github.com/calypsonet/"$repository_name".git
 
-cd $repository_name
+cd "$repository_name" || exit
 
 echo "Checkout gh-pages branch..."
 git checkout -f gh-pages
@@ -36,7 +36,7 @@ cp -rf ../html/* $version/
 echo "Update versions list..."
 echo "| Version | Documents |" > list_versions.md
 echo "|:---:|---|" >> list_versions.md
-for directory in `ls -rd [0-9]*/ | cut -f1 -d'/'`
+for directory in $(ls -rd [0-9]*/ | cut -f1 -d'/')
 do
   echo "| $directory | [API documentation]($directory) |" >> list_versions.md
 done
