@@ -16,6 +16,8 @@ jobs:
         uses: mattnotmitt/doxygen-action@v1.3.1
         with:
           doxyfile-path: .github/Doxyfile #Errors on warnings
+      - name: Make script executable
+        run: chmod +x ./.github/scripts/prepare_doxygen.sh
       - name: Prepare Doxygen doc page locally
         working-directory: .
         run: ./.github/scripts/prepare_doxygen.sh
