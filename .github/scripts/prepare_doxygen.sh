@@ -24,8 +24,8 @@ cd "$repository_name" || exit
 echo "Checkout gh-pages branch..."
 git checkout -f gh-pages
 
-echo "Delete existing SNAPSHOT directory..."
-rm -rf *-SNAPSHOT
+# echo "Delete existing SNAPSHOT directory..."
+# rm -rf *-SNAPSHOT
 
 echo "Create target directory $version..."
 mkdir $version
