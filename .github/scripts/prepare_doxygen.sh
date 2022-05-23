@@ -20,9 +20,8 @@ echo "Clone $repository_name..."
 git clone https://github.com/calypsonet/"$repository_name".git
 
 cd "$repository_name" || exit
-
 echo "Checkout gh-pages branch..."
-git status
+git fetch --tags
 git checkout -f gh-pages
 
 # echo "Delete existing SNAPSHOT directory..."
