@@ -16,7 +16,9 @@ jobs:
         uses: mattnotmitt/doxygen-action@v1.3.1
         with:
           doxyfile-path: .github/Doxyfile #Errors on warnings
-      - run: "ls -a out"
+      - name: Prepare Doxygen doc page locally
+          working-directory: .
+          run: ./.github/scripts/prepare_doxygen.sh
       - name: Deploy Doxygen documentation to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
