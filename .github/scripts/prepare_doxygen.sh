@@ -6,9 +6,9 @@ version=$1
 
 if [ "$version" = "" ]
 then
-  version_major="`cat CMakeLists.txt | grep -P 'CMAKE_PROJECT_VERSION_MAJOR.*\"([0-9]*)\"' -o`
-  version_minor="`cat CMakeLists.txt | grep -P 'CMAKE_PROJECT_VERSION_MINOR.*\"([0-9]*)\"' -o`
-  version_patch="`cat CMakeLists.txt | grep -P 'CMAKE_PROJECT_VERSION_PATCH.*\"([0-9]*)\"' -o`
+  version_major="$(cat CMakeLists.txt | grep -P 'CMAKE_PROJECT_VERSION_MAJOR.*\"([0-9]*)\"' -o)"
+  version_minor="$(cat CMakeLists.txt | grep -P 'CMAKE_PROJECT_VERSION_MINOR.*\"([0-9]*)\"' -o)"
+  version_patch="$(cat CMakeLists.txt | grep -P 'CMAKE_PROJECT_VERSION_PATCH.*\"([0-9]*)\"' -o)"
   version="${version_major}.${version_minor}.${version_patch}"
 fi
 
