@@ -16,6 +16,7 @@ echo "Computed current API version: $version"
 repository_name=$(git rev-parse --show-toplevel | xargs basename)
 
 echo "Clone $repository_name..."
+git ls-remote --heads --exit-code https://github.com/calypsonet/"$repository_name".git
 git clone --branch gh-pages https://github.com/calypsonet/"$repository_name".git
 
 cd "$repository_name" || exit
