@@ -21,13 +21,13 @@ git clone --branch gh-pages https://github.com/jeanpierrefortune/"$repository_na
 cd "$repository_name" || exit
 
 echo "Delete existing SNAPSHOT directory..."
-rm -rf *-SNAPSHOT
+rm -rf ./*-SNAPSHOT
 
 echo "Create target directory $version..."
-mkdir $version
+mkdir "$version"
 
 echo "Copy Doxygen doc..."
-cp -rf ../out/html/* $version/
+cp -rf ../out/html/* "$version"/
 
 echo "Update versions list..."
 echo "| Version | Documents |" > list_versions.md
