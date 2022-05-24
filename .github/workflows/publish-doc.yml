@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: Check out repository code from ${{ github.repository }}/${{ github.ref }}
         uses: actions/checkout@v2
+      - run: git show-ref
       - run: git checkout gh-pages
       - run: "mkdir out"
       - name: Generate project documentation with Doxygen
