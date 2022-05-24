@@ -8,7 +8,7 @@ then
   version_major="$(sed -rn 's/.*MAJOR.*\"(.*)\".*/\1/p' CMakeLists.txt)"
   version_minor="$(sed -rn 's/.*MINOR.*\"(.*)\".*/\1/p' CMakeLists.txt)"
   version_patch="$(sed -rn 's/.*PATCH.*\"(.*)\".*/\1/p' CMakeLists.txt)"
-  version="${version_major}.${version_minor}.${version_patch}"
+  version="${version_major}.${version_minor}.${version_patch}-SNAPSHOT"
 fi
 
 echo "Computed current API version: $version"
@@ -19,11 +19,9 @@ echo "Clone $repository_name..."
 git clone --branch gh-pages https://github.com/jeanpierrefortune/"$repository_name".git
 
 cd "$repository_name" || exit
-#echo "Checkout gh-pages branch..."
-#git checkout -f gh-pages
 
-# echo "Delete existing SNAPSHOT directory..."
-# rm -rf *-SNAPSHOT
+echo "Delete existing SNAPSHOT directory..."
+rm -rf *-SNAPSHOT
 
 echo "Create target directory $version..."
 mkdir $version
