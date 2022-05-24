@@ -18,6 +18,7 @@ jobs:
         uses: mattnotmitt/doxygen-action@v1.9.2
         with:
           doxyfile-path: .github/doxygen/Doxyfile
+          working-directory: .github/doxygen/
       - name: Make script executable
         run: chmod +x ./.github/scripts/prepare_doxygen.sh
       - name: Prepare Doxygen doc page locally
