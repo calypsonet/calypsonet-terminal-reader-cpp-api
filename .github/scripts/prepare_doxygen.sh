@@ -1,7 +1,6 @@
 #!/bin/sh
 
 echo "Compute the current API version..."
-
 version=$1
 
 if [ "$version" = "" ]
