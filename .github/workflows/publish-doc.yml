@@ -17,7 +17,7 @@ jobs:
       - name: Generate project documentation with Doxygen
         uses: mattnotmitt/doxygen-action@v1.9.2
         with:
-          doxyfile-path: .github/Doxyfile
+          doxyfile-path: .github/doxygen/Doxyfile
       - name: Make script executable
         run: chmod +x ./.github/scripts/prepare_doxygen.sh
       - name: Prepare Doxygen doc page locally
