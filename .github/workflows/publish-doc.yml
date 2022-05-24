@@ -15,7 +15,7 @@ jobs:
       - run: git checkout gh-pages
       - run: "mkdir out"
       - name: Generate project documentation with Doxygen
-        uses: mattnotmitt/doxygen-action@v1.3.1
+        uses: mattnotmitt/doxygen-action@v1.9.2
         with:
           doxyfile-path: .github/Doxyfile
       - name: Make script executable
