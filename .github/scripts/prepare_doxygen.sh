@@ -29,7 +29,7 @@ echo "Create target directory $version..."
 mkdir $version
 
 echo "Copy Doxygen doc..."
-cp -rf ../../html/* $version/
+cp -rf ../out/html/* $version/
 
 echo "Update versions list..."
 echo "| Version | Documents |" > list_versions.md
