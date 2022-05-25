@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['readerapiproperties_2eh_0',['ReaderApiProperties.h',['../_reader_api_properties_8h.html',1,'']]],
+  ['readercommunicationexception_1',['ReaderCommunicationException',['../classcalypsonet_1_1terminal_1_1reader_1_1_reader_communication_exception.html',1,'calypsonet::terminal::reader::ReaderCommunicationException'],['../classcalypsonet_1_1terminal_1_1reader_1_1_reader_communication_exception.html#aac3e8671937e2ea4cfb42a4d3c3f440a',1,'calypsonet::terminal::reader::ReaderCommunicationException::ReaderCommunicationException(const std::string &amp;message)'],['../classcalypsonet_1_1terminal_1_1reader_1_1_reader_communication_exception.html#a6ca508822d96a5ea35d1f8abde64b7bd',1,'calypsonet::terminal::reader::ReaderCommunicationException::ReaderCommunicationException(const std::string &amp;message, const std::shared_ptr&lt; Exception &gt; cause)']]],
+  ['readercommunicationexception_2eh_2',['ReaderCommunicationException.h',['../_reader_communication_exception_8h.html',1,'']]],
+  ['readerprotocolnotsupportedexception_3',['ReaderProtocolNotSupportedException',['../classcalypsonet_1_1terminal_1_1reader_1_1_reader_protocol_not_supported_exception.html',1,'calypsonet::terminal::reader::ReaderProtocolNotSupportedException'],['../classcalypsonet_1_1terminal_1_1reader_1_1_reader_protocol_not_supported_exception.html#a375ecd73997761c739ccb178ea8b7103',1,'calypsonet::terminal::reader::ReaderProtocolNotSupportedException::ReaderProtocolNotSupportedException()']]],
+  ['readerprotocolnotsupportedexception_2eh_4',['ReaderProtocolNotSupportedException.h',['../_reader_protocol_not_supported_exception_8h.html',1,'']]],
+  ['removeobserver_5',['removeObserver',['../classcalypsonet_1_1terminal_1_1reader_1_1_observable_card_reader.html#a7af8b48a28922bd60616d0ee49a2bea3',1,'calypsonet::terminal::reader::ObservableCardReader']]],
+  ['repeating_6',['REPEATING',['../classcalypsonet_1_1terminal_1_1reader_1_1_observable_card_reader.html#a2952821cfef3b41cdf27d8083d3f22eba63edd1ff1ac720fe553cdd36fe513e64',1,'calypsonet::terminal::reader::ObservableCardReader']]]
+];
