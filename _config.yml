@@ -1,0 +1,4 @@
+theme: jekyll-theme-minimal
+title: Calypsonet Terminal Reader C++ API
+include:
+  - "_*.html"
