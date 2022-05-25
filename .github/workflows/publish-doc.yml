@@ -29,7 +29,7 @@ jobs:
           doxyfile-path: ./Doxyfile
       - name: Prepare Doxygen doc page locally
         working-directory: .
-        run: ./.github/scripts/prepare_doxygen.sh
+        run: ./.github/scripts/prepare_doxygen.sh 1.0.0
       - name: Deploy Doxygen documentation to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
