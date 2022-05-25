@@ -10,4 +10,4 @@ fi
 
 echo "Computed current API version: $version"
 
-sed -i "s/%PROJECT_VERSION%/$version/g" ../doxygen/Doxyfile
+sed -i "s/%PROJECT_VERSION%/$version/g" ./.github/doxygen/Doxyfile
