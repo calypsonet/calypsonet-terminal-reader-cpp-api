@@ -1,0 +1,33 @@
+name: Publish API documentation
+
+on:
+  push:
+    branches:
+      - main
+      - doxygen
+
+jobs:
+  publish-doc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code from ${{ github.repository }}/${{ github.ref }}
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - run: "mkdir out"
+      - name: Generate project documentation with Doxygen
+        uses: mattnotmitt/doxygen-action@v1.9.2
+        with:
+          working-directory: .github/doxygen/
+          doxyfile-path: ./Doxyfile
+      - name: Make script executable
+        run: chmod +x ./.github/scripts/prepare_doxygen.sh
+      - name: Prepare Doxygen doc page locally
+        working-directory: .
+        run: ./.github/scripts/prepare_doxygen.sh
+      - name: Deploy Doxygen documentation to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./${{ github.event.repository.name }}
+          enable_jekyll: true
