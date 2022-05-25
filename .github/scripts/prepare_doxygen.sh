@@ -3,12 +3,9 @@
 echo "Compute the current API version..."
 version=$1
 
-if [ "$version" = "" ]
-then
-  version_major="$(sed -rn 's/.*MAJOR.*\"(.*)\".*/\1/p' CMakeLists.txt)"
-  version_minor="$(sed -rn 's/.*MINOR.*\"(.*)\".*/\1/p' CMakeLists.txt)"
-  version_patch="$(sed -rn 's/.*PATCH.*\"(.*)\".*/\1/p' CMakeLists.txt)"
-  version="${version_major}.${version_minor}.${version_patch}-SNAPSHOT"
+if [ "$version" = "" ]; then
+  # SNAPSHOT version
+  version="$(sed -rn 's/.*MAJOR.*\"(.*)\".*/\1/p' CMakeLists.txt).$(sed -rn 's/.*MINOR.*\"(.*)\".*/\1/p' CMakeLists.txt).$(sed -rn 's/.*PATCH.*\"(.*)\".*/\1/p' CMakeLists.txt)-SNAPSHOT"
 fi
 
 echo "Computed current API version: $version"
@@ -30,11 +27,10 @@ echo "Copy Doxygen doc..."
 cp -rf ../.github/doxygen/out/html/* "$version"/
 
 echo "Update versions list..."
-echo "| Version | Documents |" > list_versions.md
-echo "|:---:|---|" >> list_versions.md
-for directory in $(ls -rd [0-9]*/ | cut -f1 -d'/')
-do
-  echo "| $directory | [API documentation]($directory) |" >> list_versions.md
+echo "| Version | Documents |" >list_versions.md
+echo "|:---:|---|" >>list_versions.md
+for directory in $(ls -rd [0-9]*/ | cut -f1 -d'/'); do
+  echo "| $directory | [API documentation]($directory) |" >>list_versions.md
 done
 
 echo "Computed all versions:"
