@@ -18,8 +18,9 @@ jobs:
       - name: Check version
         working-directory: .
         run: ./.github/scripts/check_version.sh
-      - run: "mkdir out"
-      - run: "echo $version"
+      - name: Patch Doxyfile
+        working-directory: .
+        run: ./.github/scripts/patch_doxyfile.sh
       - name: Generate project documentation with Doxygen
         uses: mattnotmitt/doxygen-action@v1.9.2
         with:
