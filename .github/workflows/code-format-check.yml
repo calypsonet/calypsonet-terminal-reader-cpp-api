@@ -9,6 +9,6 @@ jobs:
       - name: Run clang-format style check for C++ programs.
         uses: jidicula/clang-format-action@v4.6.2
         with:
-          clang-format-version: '14'
+          clang-format-version: '10'
           check-path: 'src'
           fallback-style: 'Google' # optional
