@@ -44,7 +44,7 @@ class CardReaderObservationExceptionHandlerSpi {
    * @param e The original exception.
    * @since 1.0.0
    */
-  virtual void onReaderObservationError(const std::string& contextInfo,
+  virtual void onReaderObservationError ( const std::string& contextInfo,
                                         const std::string& readerName,
                                         const std::shared_ptr<Exception> e) = 0;
 };
