@@ -22,7 +22,7 @@
 namespace calypsonet {
 namespace terminal {
 namespace reader {
-namespace selection  {
+namespace selection {
 
 using namespace keyple::core::util::cpp::exception;
 
