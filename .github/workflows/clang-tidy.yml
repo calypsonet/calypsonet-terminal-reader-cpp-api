@@ -16,4 +16,4 @@ jobs:
           builddir: 'build'
           excludedirs: ''
           extensions: 'c,h,C,H,cpp,hpp,cc,hh,c++,h++,cxx,hxx'
-          cmakeoptions: ''
+          cmakeoptions: '-DCMAKE_TOOLCHAIN_FILE=../toolchain/gcc-linux.cmake'

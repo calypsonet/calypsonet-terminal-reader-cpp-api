@@ -1,2 +1,2 @@
 #!/bin/sh
-clang-format -i $1
+find . -regex '.*\.\(cpp\|hpp\|h\|cc\|cxx\)' -exec clang-format -style=file -i --verbose {} \;
