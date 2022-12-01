@@ -1,6 +1,5 @@
 # *************************************************************************************************
-# Copyright (c) 2021 Calypso Networks Association                                                 *
-# https://www.calypsonet-asso.org/                                                                *
+# Copyright (c) 2021 Calypso Networks Association http://calypsonet.org/                          *
 #                                                                                                 *
 # See the NOTICE file(s) distributed with this work for additional information regarding          *
 # copyright ownership.                                                                            *
@@ -11,23 +10,21 @@
 # SPDX-License-Identifier: EPL-2.0                                                                *
 # *************************************************************************************************/
 
-SET(EXECTUABLE_NAME keypleterminalreader_ut)
+SET(LIBRARY_NAME calypsonetterminalreadercppapilib)
 
-INCLUDE_DIRECTORIES(
+# declare this library as header only
+ADD_LIBRARY(
+    ${LIBRARY_NAME}
+    INTERFACE
+)
+
+TARGET_INCLUDE_DIRECTORIES(
+    ${LIBRARY_NAME}
+    INTERFACE
     ${CMAKE_CURRENT_SOURCE_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}/../main
-    ${CMAKE_CURRENT_SOURCE_DIR}/../main/spi
+    ${CMAKE_CURRENT_SOURCE_DIR}/selection
+    ${CMAKE_CURRENT_SOURCE_DIR}/selection/spi
+    ${CMAKE_CURRENT_SOURCE_DIR}/spi
 )
 
-ADD_EXECUTABLE(
-    ${EXECTUABLE_NAME}
-
-    ${CMAKE_CURRENT_SOURCE_DIR}/MainTest.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/ReaderApiPropertiesTest.cpp
-)
-
-# Add Google Test
-SET(GOOGLETEST_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-INCLUDE(CMakeLists.txt.googletest)
-
-TARGET_LINK_LIBRARIES(${EXECTUABLE_NAME} gtest gmock Keyple::Util)
+ADD_LIBRARY(CalypsoNet::TerminalReader ALIAS ${LIBRARY_NAME})
