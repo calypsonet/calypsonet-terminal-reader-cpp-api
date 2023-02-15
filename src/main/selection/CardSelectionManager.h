@@ -1,5 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2021 Calypso Networks Association https://calypsonet.org/                        *
+ * Copyright (c) 2023 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * See the NOTICE file(s) distributed with this work for additional information regarding         *
  * copyright ownership.                                                                           *
@@ -69,10 +69,10 @@ using NotificationMode = ObservableCardReader::NotificationMode;
 class CardSelectionManager {
 public:
     /**
-     * 
+     *
      */
     virtual ~CardSelectionManager() = default;
-    
+
     /**
      * Sets the multiple selection mode to process all selection cases even in case of a successful
      * selection.
@@ -109,6 +109,32 @@ public:
     virtual void prepareReleaseChannel() = 0;
 
     /**
+     * Exports the current prepared card selection scenario to a string in JSON format.
+     *
+     * <p>This string can be imported into the same or another card selection manager via the method
+     * importCardSelectionScenario(const std::string&).
+     *
+     * @return A not null JSON string.
+     * @see importCardSelectionScenario(const std::string&)
+     * @since 1.1.0
+     */
+    virtual const std::string& exportCardSelectionScenario() = 0;
+
+    /**
+     * Imports a card selection scenario provided as a string in JSON format.
+     *
+     * <p>The string must have been exported from a card selection manager via the method
+     * exportCardSelectionScenario().
+     *
+     * @param cardSelectionScenario The string in JSON format containing the card selection scenario.
+     * @return The index of the last imported selection in the card selection scenario.
+     * @throws IllegalArgumentException If the string is null or malformed.
+     * @see exportCardSelectionScenario()
+     * @since 1.1.0
+     */
+    virtual int importCardSelectionScenario(const std::string& cardSelectionScenario) = 0;
+
+    /**
      * Explicitely executes a previously prepared card selection scenario and returns the card
      * selection result.
      *
@@ -130,7 +156,7 @@ public:
      * Schedules the execution of the prepared card selection scenario as soon as a card is
      * presented to the provided ObservableCardReader.
      *
-     * <p>calypsonet::terminal::reader::CardReaderEvent are pushed to the observer according to the 
+     * <p>calypsonet::terminal::reader::CardReaderEvent are pushed to the observer according to the
      * specified notification mode.
      *
      * <p>The reader's behavior at the end of the card processing is defined by the specified
@@ -140,8 +166,8 @@ public:
      * parseScheduledCardSelectionsResponse(ScheduledCardSelectionsResponse).
      *
      * @param observableCardReader The reader with which the card communication is carried out.
-     * @param detectionMode The card detection mode.
-     * @param notificationMode The card notification mode.
+     * @param detectionMode The card detection mode to use when searching for a card.
+     * @param notificationMode The card notification mode to use when a card is detected.
      * @throw IllegalArgumentException If one of the parameters is null.
      * @since 1.0.0
      */

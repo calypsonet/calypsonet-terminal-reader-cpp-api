@@ -1,5 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2021 Calypso Networks Association https://calypsonet.org/                        *
+ * Copyright (c) 2023 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * See the NOTICE file(s) distributed with this work for additional information regarding         *
  * copyright ownership.                                                                           *
@@ -40,7 +40,7 @@ namespace reader {
 // };
 
 // const std::string ReaderApiProperties::VERSION = "1.0";
-static const std::string ReaderApiProperties_VERSION = "1.0";
+static const std::string ReaderApiProperties_VERSION = "1.1";
 
 }
 }
