@@ -1,0 +1,5 @@
+<map id="calypsonet::terminal::reader::CardReader" name="calypsonet::terminal::reader::CardReader">
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,144,80"/>
+<area shape="rect" id="node2" href="$classcalypsonet_1_1terminal_1_1reader_1_1_configurable_card_reader.html" title=" " alt="" coords="192,5,401,47"/>
+<area shape="rect" id="node3" href="$classcalypsonet_1_1terminal_1_1reader_1_1_observable_card_reader.html" title=" " alt="" coords="195,71,399,112"/>
+</map>
