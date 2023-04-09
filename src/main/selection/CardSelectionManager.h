@@ -118,7 +118,7 @@ public:
      * @see importCardSelectionScenario(const std::string&)
      * @since 1.1.0
      */
-    virtual const std::string& exportCardSelectionScenario() = 0;
+    virtual const std::string exportCardSelectionScenario() const = 0;
 
     /**
      * Imports a card selection scenario provided as a string in JSON format.
